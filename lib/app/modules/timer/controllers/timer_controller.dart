@@ -228,6 +228,7 @@ class TimerController extends GetxController with WidgetsBindingObserver {
 
     if (seconds < 0) {
       stopTimer();
+      Get.offNamed('/timer-ring');
     } else {
       if (seconds < 1) {
         timerRemainingTime.value = seconds * 1000;
